@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Syed Khurram's Dev notes</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-03-14 13:58:35 "/>
+<meta name="author" content=""/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Syed Khurram's Dev notes</h1>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Emacs </a>
+<ul>
+<li><a href="#sec-1_1">1.1 To do </a>
+<ul>
+<li><a href="#sec-1_1_1">1.1.1 Sane redo </a></li>
+</ul>
+</li>
+<li><a href="#sec-1_2">1.2 Keyboard macros </a></li>
+<li><a href="#sec-1_3">1.3 Links </a></li>
+<li><a href="#sec-1_4">1.4 org </a></li>
+<li><a href="#sec-1_5">1.5 little hacks </a>
+<ul>
+<li><a href="#sec-1_5_1">1.5.1 Default folder </a></li>
+<li><a href="#sec-1_5_2">1.5.2 Export dev notes </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 linux </a></li>
+<li><a href="#sec-3">3 Clojure </a>
+<ul>
+<li><a href="#sec-3_1">3.1 destructuring </a></li>
+<li><a href="#sec-3_2">3.2 ClojureScript One </a>
+<ul>
+<li><a href="#sec-3_2_1">3.2.1 Marginalia </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 JavaScript </a></li>
+<li><a href="#sec-5">5 Misc </a>
+<ul>
+<li><a href="#sec-5_1">5.1 export git hub wiki into pdf </a></li>
+<li><a href="#sec-5_2">5.2 calculate date difference using Joda time </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Emacs </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+Shortcut keys
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Default binding</th><th scope="col" class="left">Function</th><th scope="col" class="left">Notes</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">C-h m</td><td class="left"></td><td class="left">describe-mode   (current mode)</td></tr>
+<tr><td class="left">M-g M-g</td><td class="left"></td><td class="left">goto line</td></tr>
+<tr><td class="left">C-l</td><td class="left"></td><td class="left">goto line</td></tr>
+<tr><td class="left">M-q</td><td class="left"></td><td class="left">reformat paragraph</td></tr>
+<tr><td class="left">C-x C-+</td><td class="left"></td><td class="left">increase font size</td></tr>
+<tr><td class="left">C-x C&ndash;</td><td class="left"></td><td class="left">decrease font size</td></tr>
+<tr><td class="left"></td><td class="left"></td><td class="left">(0, +, - for further adjustment)</td></tr>
+<tr><td class="left">C-c C-e</td><td class="left"></td><td class="left">export / publish org</td></tr>
+<tr><td class="left">M-C-SPC</td><td class="left"></td><td class="left">Select from current position to end of next sexp</td></tr>
+<tr><td class="left">M-C-@</td><td class="left"></td><td class="left">-do-</td></tr>
+<tr><td class="left">M-%</td><td class="left">query-replace</td><td class="left"></td></tr>
+<tr><td class="left">Macros</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">C-x (</td><td class="left"></td><td class="left">start recording macro</td></tr>
+<tr><td class="left">C-x )</td><td class="left"></td><td class="left">stop recording macro</td></tr>
+<tr><td class="left">C-x e</td><td class="left"></td><td class="left">execute macro (e to repeat)</td></tr>
+<tr><td class="left">C-u 10 C-x e</td><td class="left"></td><td class="left">execute macro 10 times</td></tr>
+<tr><td class="left">RAD / Eclipse</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">C-S-M</td><td class="left"></td><td class="left">Add import (java.util.Date -&gt; Date and import</td></tr>
+</tbody>
+</table>
+
+
+
+
+
+</div>
+
+<div id="outline-container-1_1" class="outline-3">
+<h3 id="sec-1_1"><span class="section-number-3">1.1</span> To do </h3>
+<div class="outline-text-3" id="text-1_1">
+
+
+<p>
+How to describe any mode? Not necessarily the current mode.
+</p>
+<p>
+winner-mode
+</p>
+
+</div>
+
+<div id="outline-container-1_1_1" class="outline-4">
+<h4 id="sec-1_1_1"><span class="section-number-4">1.1.1</span> <span class="todo TODO"> TODO</span> Sane redo </h4>
+<div class="outline-text-4" id="text-1_1_1">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1_2" class="outline-3">
+<h3 id="sec-1_2"><span class="section-number-3">1.2</span> Keyboard macros </h3>
+<div class="outline-text-3" id="text-1_2">
+
+
+<p>
+C-x (    Start recording
+C-x )    Stop recording
+</p>
+<p>
+C-x e    execute macro (e to repeat)
+C-u 10 C-x e  execute macro 10 times
+</p>
+
+<p>
+<a href="http://www.emacswiki.org/emacs/KeyboardMacros">http://www.emacswiki.org/emacs/KeyboardMacros</a>
+<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros">http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1_3" class="outline-3">
+<h3 id="sec-1_3"><span class="section-number-3">1.3</span> Links </h3>
+<div class="outline-text-3" id="text-1_3">
+
+<p><a href="http://www.learningclojure.com/2009/12/favourite-keys-for-emacs-and-slime.html">Learning Clojure: Favourite keys for EMACS and SLIME</a>
+</p>
+<p>
+<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Expressions.html">Expressions - GNU Emacs Manual</a>
+</p>
+<p>
+<a href="http://www.math.uh.edu/~bgb/emacs_keys.html">Emacs key combinations</a>
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-1_4" class="outline-3">
+<h3 id="sec-1_4"><span class="section-number-3">1.4</span> org </h3>
+<div class="outline-text-3" id="text-1_4">
+
+<p><a href="file://d:/docs/Misc/emacs/orgcard-7.8.pdf">org-mode reference</a>
+</p>
+<p>
+<a href="http://orgmode.org/org.html">org manual (online)</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1_5" class="outline-3">
+<h3 id="sec-1_5"><span class="section-number-3">1.5</span> little hacks </h3>
+<div class="outline-text-3" id="text-1_5">
+
+
+
+</div>
+
+<div id="outline-container-1_5_1" class="outline-4">
+<h4 id="sec-1_5_1"><span class="section-number-4">1.5.1</span> Default folder </h4>
+<div class="outline-text-4" id="text-1_5_1">
+
+<p>When emacs starts, the home folder should be the current folder. Put this in .emacs, 
+</p>
+<p>
+(cd "~")
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1_5_2" class="outline-4">
+<h4 id="sec-1_5_2"><span class="section-number-4">1.5.2</span> Export dev notes </h4>
+<div class="outline-text-4" id="text-1_5_2">
+
+
+<p>
+Open ~/dev.org
+C-c C-e b
+</p>
+<p>
+This will export to org.html and also open the file in browser. 
+</p>
+<p>
+C-c C-e h Export only 
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> linux </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Clojure </h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3_1" class="outline-3">
+<h3 id="sec-3_1"><span class="section-number-3">3.1</span> destructuring </h3>
+<div class="outline-text-3" id="text-3_1">
+
+
+
+<p>
+<a href="http://blog.jayfields.com/2010/07/clojure-destructuring.html">http://blog.jayfields.com/2010/07/clojure-destructuring.html</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3_2" class="outline-3">
+<h3 id="sec-3_2"><span class="section-number-3">3.2</span> ClojureScript One </h3>
+<div class="outline-text-3" id="text-3_2">
+
+
+</div>
+
+<div id="outline-container-3_2_1" class="outline-4">
+<h4 id="sec-3_2_1"><span class="section-number-4">3.2.1</span> <a href="Desktop/documentation.html">Marginalia</a> </h4>
+<div class="outline-text-4" id="text-3_2_1">
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> JavaScript </h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+<a href="https://developer.mozilla.org/en/JavaScript/A_re-introduction_to_JavaScript">https://developer.mozilla.org/en/JavaScript/A_re-introduction_to_JavaScript</a>
+</p>
+<p>
+<a href="http://ejohn.org/apps/learn/">http://ejohn.org/apps/learn/</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Misc </h2>
+<div class="outline-text-2" id="text-5">
+
+
+
+</div>
+
+<div id="outline-container-5_1" class="outline-3">
+<h3 id="sec-5_1"><span class="section-number-3">5.1</span> <span class="todo TODO"> TODO</span> export git hub wiki into pdf </h3>
+<div class="outline-text-3" id="text-5_1">
+
+
+<p>
+I want to read <a href="https://github.com/brentonashworth/one/wiki">one</a> wiki offline. What is the best way to do that?
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5_2" class="outline-3">
+<h3 id="sec-5_2"><span class="section-number-3">5.2</span> calculate date difference using Joda time </h3>
+<div class="outline-text-3" id="text-5_2">
+
+<p>This is just insanely intuitive!
+</p>
+
+<p>
+Date expiryDate = new Date(2008, 10, 10);
+Date currentDate = new Date(2012, 03, 14);
+int days = Days.daysBetween(new DateTime(expiryDate), new DateTime(currentDate)).getDays(); 
+int years = Years.yearsBetween(new DateTime(expiryDate), new DateTime(currentDate)).getYears();
+System.out.printf("Years: %d, days: %d\n", years, days);
+</p>
+<p>
+=&gt;   Years: 3, days: 1251
+</p>
+
+<p>
+Period period = new Period(new DateTime(expiryDate), new DateTime(currentDate));
+</p>
+<p>
+System.out.printf("Period: %s; years: %d, months: %d days: %d\n", period, period.getYears(), period.getMonths(), period.getDays());
+</p>
+<p>
+=&gt; Period: P3Y5M4D; years: 3, months: 5 days: 4
+</p>
+<p>
+Period periodYearDay = new Period(new DateTime(expiryDate), new DateTime(currentDate), PeriodType.yearDay());
+</p>
+<p>
+System.out.printf("Period: %s; years: %d days: %d\n", periodYearDay, periodYearDay.getYears(), periodYearDay.getDays());
+</p>
+<p>
+=&gt; Period: P3Y156D; years: 3 days: 156
+</p>
+<p>
+<a href="http://joda-time.sourceforge.net/faq.html">http://joda-time.sourceforge.net/faq.html</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author">Author: </p>
+<p class="creator">Org version 7.5 with Emacs version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+</div>
+</div>
+</body>
+</html>

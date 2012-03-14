@@ -1,0 +1,132 @@
+Syed Khurram's Dev notes
+
+* Emacs
+
+Shortcut keys
+
+| Default binding | Function      | Notes                                            |
+|-----------------+---------------+--------------------------------------------------|
+| C-h m           |               | describe-mode   (current mode)                   |
+| M-g M-g         |               | goto line                                        |
+| C-l             |               | goto line                                        |
+| M-q             |               | reformat paragraph                               |
+| C-x C-+         |               | increase font size                               |
+| C-x C--         |               | decrease font size                               |
+|                 |               | (0, +, - for further adjustment)                 |
+| C-c C-e         |               | export / publish org                             |
+| M-C-SPC         |               | Select from current position to end of next sexp |
+| M-C-@           |               | -do-                                             |
+|                 |               |                                                  |
+| M-%             | query-replace |                                                  |
+|                 |               |                                                  |
+| Macros          |               |                                                  |
+|                 |               |                                                  |
+| C-x (           |               | start recording macro                            |
+| C-x )           |               | stop recording macro                             |
+| C-x e           |               | execute macro (e to repeat)                      |
+| C-u 10 C-x e    |               | execute macro 10 times                           |
+|                 |               |                                                  |
+| RAD / Eclipse   |               |                                                  |
+| C-S-M           |               | Add import (java.util.Date -> Date and import    |
+
+
+
+** To do
+
+How to describe any mode? Not necessarily the current mode.
+
+winner-mode
+
+*** TODO Sane redo
+
+** Keyboard macros
+
+C-x (    Start recording
+C-x )    Stop recording
+
+C-x e    execute macro (e to repeat)
+C-u 10 C-x e  execute macro 10 times
+
+
+http://www.emacswiki.org/emacs/KeyboardMacros
+http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros
+
+** Links
+[[http://www.learningclojure.com/2009/12/favourite-keys-for-emacs-and-slime.html][Learning Clojure: Favourite keys for EMACS and SLIME]]
+
+[[http://www.gnu.org/software/emacs/manual/html_node/emacs/Expressions.html][Expressions - GNU Emacs Manual]]
+
+[[http://www.math.uh.edu/~bgb/emacs_keys.html][Emacs key combinations]]
+
+
+** org
+[[file:d:/docs/Misc/emacs/orgcard-7.8.pdf][org-mode reference]]
+
+[[http://orgmode.org/org.html][org manual (online)]]
+
+** little hacks
+
+*** Default folder
+When emacs starts, the home folder should be the current folder. Put this in .emacs, 
+
+(cd "~")
+
+*** Export dev notes
+
+Open ~/dev.org
+C-c C-e b
+
+This will export to org.html and also open the file in browser. 
+
+C-c C-e h Export only 
+
+* linux
+
+* Clojure
+** destructuring
+
+
+http://blog.jayfields.com/2010/07/clojure-destructuring.html
+
+** ClojureScript One
+*** [[file:Desktop/documentation.html][Marginalia]]
+
+* JavaScript
+
+https://developer.mozilla.org/en/JavaScript/A_re-introduction_to_JavaScript
+
+http://ejohn.org/apps/learn/
+
+* Misc
+
+** TODO export git hub wiki into pdf
+
+I want to read [[https://github.com/brentonashworth/one/wiki][one]] wiki offline. What is the best way to do that?
+
+** calculate date difference using Joda time
+This is just insanely intuitive!
+
+
+Date expiryDate = new Date(2008, 10, 10);
+Date currentDate = new Date(2012, 03, 14);
+int days = Days.daysBetween(new DateTime(expiryDate), new DateTime(currentDate)).getDays(); 
+int years = Years.yearsBetween(new DateTime(expiryDate), new DateTime(currentDate)).getYears();
+System.out.printf("Years: %d, days: %d\n", years, days);
+
+=>   Years: 3, days: 1251
+
+
+Period period = new Period(new DateTime(expiryDate), new DateTime(currentDate));
+
+System.out.printf("Period: %s; years: %d, months: %d days: %d\n", period, period.getYears(), period.getMonths(), period.getDays());
+
+=> Period: P3Y5M4D; years: 3, months: 5 days: 4
+
+Period periodYearDay = new Period(new DateTime(expiryDate), new DateTime(currentDate), PeriodType.yearDay());
+
+System.out.printf("Period: %s; years: %d days: %d\n", periodYearDay, periodYearDay.getYears(), periodYearDay.getDays());
+
+=> Period: P3Y156D; years: 3 days: 156
+
+http://joda-time.sourceforge.net/faq.html
+
