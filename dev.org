@@ -4,30 +4,77 @@ Syed Khurram's Dev notes
 
 Shortcut keys
 
-| Default binding | Function      | Notes                                            |
-|-----------------+---------------+--------------------------------------------------|
-| C-h m           |               | describe-mode   (current mode)                   |
-| M-g M-g         |               | goto line                                        |
-| C-l             |               | goto line                                        |
-| M-q             |               | reformat paragraph                               |
-| C-x C-+         |               | increase font size                               |
-| C-x C--         |               | decrease font size                               |
-|                 |               | (0, +, - for further adjustment)                 |
-| C-c C-e         |               | export / publish org                             |
-| M-C-SPC         |               | Select from current position to end of next sexp |
-| M-C-@           |               | -do-                                             |
-|                 |               |                                                  |
-| M-%             | query-replace |                                                  |
-|                 |               |                                                  |
-| Macros          |               |                                                  |
-|                 |               |                                                  |
-| C-x (           |               | start recording macro                            |
-| C-x )           |               | stop recording macro                             |
-| C-x e           |               | execute macro (e to repeat)                      |
-| C-u 10 C-x e    |               | execute macro 10 times                           |
-|                 |               |                                                  |
-| RAD / Eclipse   |               |                                                  |
-| C-S-M           |               | Add import (java.util.Date -> Date and import    |
+| Default binding | Function                        | Notes                                            |
+|-----------------+---------------------------------+--------------------------------------------------|
+| C-x d           | ido-dired                       | Change directory                                 |
+| C-x C-s         |                                 | save file                                        |
+| C-x C-w         |                                 | save as                                          |
+| C-x k           |                                 | kill buffer                                      |
+| C-x C-v         |                                 | reload file                                      |
+| C-x C-q         |                                 | toggle readonly                                  |
+| M-/ (or tab)    |                                 | complete word                                    |
+|                 |                                 |                                                  |
+| Editing         |                                 |                                                  |
+| M-y             | cua-paste-pop                   | Show kill ring                                   |
+|                 |                                 |                                                  |
+|                 |                                 |                                                  |
+| C-h m           |                                 | describe-mode   (current mode)                   |
+| M-g M-g (M-g g) | goto-line                       | goto line                                        |
+| C-l             | goto-line                       | goto line                                        |
+| M-q             |                                 | reformat paragraph                               |
+| C-x C-+         |                                 | increase font size                               |
+| C-x C--         |                                 | decrease font size                               |
+|                 |                                 | (0, +, - for further adjustment)                 |
+| C-c C-e         |                                 | export / publish org                             |
+| M-C-SPC         |                                 | Select from current position to end of next sexp |
+| M-C-@           |                                 | -do-                                             |
+|                 |                                 |                                                  |
+|                 |                                 |                                                  |
+| Search          |                                 |                                                  |
+| C-s             |                                 | search forward regexp                            |
+| C-r             |                                 | search backward                                  |
+|                 | multi-occur-in-matching-buffers | Search all or some open buffers                  |
+|                 | M-x occur                       | List occurrences                                 |
+|                 | M-x rgrep                       | run grep                                         |
+| C-M-s           |                                 | non-regex search                                 |
+|                 |                                 |                                                  |
+|                 |                                 |                                                  |
+| M-%             | query-replace                   |                                                  |
+|                 |                                 |                                                  |
+| M-$             |                                 | spell check current word                         |
+| M-x ispell      | ispell                          | spell check whole buffer                         |
+|                 |                                 |                                                  |
+| Navigation      |                                 |                                                  |
+| C-u C-SPC       |                                 | move back in mark ring (local and global)        |
+| C-x C-@         |                                 | -do-                                             |
+|                 |                                 |                                                  |
+| C-M-b           |                                 | move back by word (sexp in lisp mode)            |
+| C-M-f           |                                 | move forward by word                             |
+|                 |                                 |                                                  |
+| C-M-b           |                                 | select from current point to start of word       |
+| C-M-f           |                                 | select from current point to end of word         |
+|                 |                                 |                                                  |
+| C-M-d           |                                 | down in list                                     |
+| C-M-u           |                                 | up in list                                       |
+|                 |                                 |                                                  |
+| C-M-a           |                                 | select from point to start of def                |
+| C-M-e           |                                 | select from point to end of def                  |
+|                 |                                 |                                                  |
+| C-x r SPC <chr> | point-to-register               | Save current location in register <chr>          |
+| C-x r j <chr>   |                                 | Go back to that location                         |
+|                 | list-registers                  | Show a list of registers.                        |
+|                 |                                 |                                                  |
+| Macros          |                                 |                                                  |
+|                 |                                 |                                                  |
+| C-x (           |                                 | start recording macro                            |
+| C-x )           |                                 | stop recording macro                             |
+| C-x e           |                                 | execute macro (e to repeat)                      |
+| C-u 10 C-x e    |                                 | execute macro 10 times                           |
+|                 |                                 |                                                  |
+| M-x calculator  | calculator                      | Interactive calculator                           |
+|                 |                                 |                                                  |
+| RAD / Eclipse   |                                 |                                                  |
+| C-S-M           |                                 | Add import (java.util.Date -> Date and import    |
 
 
 
@@ -47,9 +94,27 @@ C-x )    Stop recording
 C-x e    execute macro (e to repeat)
 C-u 10 C-x e  execute macro 10 times
 
-
 http://www.emacswiki.org/emacs/KeyboardMacros
+
 http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros
+
+*** temporary example
+
+Keyboard Macros
+
+Begin recording: C-x (
+End recording: C-x )
+Execute macro: C-x e
+Example: Add 'extern' before all function protoypes in a file.
+Go to the first prototype, and say:
+
+    C-x (
+    C-a
+    extern<SPACE>
+    C-n
+    C-x )
+Then say C-u 50 C-x e to replace 50 prototypes.
+
 
 ** Links
 [[http://www.learningclojure.com/2009/12/favourite-keys-for-emacs-and-slime.html][Learning Clojure: Favourite keys for EMACS and SLIME]]
@@ -80,7 +145,78 @@ This will export to org.html and also open the file in browser.
 
 C-c C-e h Export only 
 
+
+*** 
+
+;; save and restore my buffers every time
+(desktop-save-mode 1)
+
+;; show me line and column nos
+(line-number-mode t)
+(column-number-mode t)
+
+;; cscope
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
+
+;; show date and time in mode-line
+(setq display-time-day-and-date t )
+
+(display-time)
+
+
+
+
+
+** mark ring
+There are local and global mark rings.
+
+cua-set-mark 
+
+Default bindings: C-@ and C-SPC
+
+Toggle mark.
+
+
+Move back in mark ring using all of these command.
+C-u C-SPC
+C-u C-@
+
+C-x C-SPC
+C-x C-@
+
+*** TODO How do we move forward in mark ring once we've gone back?
+
+** registers 
+point-to-register
+
+C-x r SPC a           Save current location in register a
+
+C-x r j a             Go back to that location or restore that configuration.
+
+Registers are characters
+
+List of registers   list-registers in register.el
+
+
+
+** calculator
+M-x calculator
+
+
+Change input base: i (b | o | h)
+Change output base: o (b | o | h)
+
 * linux
+
+** reload profile
+
+After changing the bash profile, you need to reload it:
+
+$ source ~/.bashrc
+
+$ source ~/.profile
+
 
 * Clojure
 ** destructuring
@@ -90,6 +226,16 @@ http://blog.jayfields.com/2010/07/clojure-destructuring.html
 
 ** ClojureScript One
 *** [[file:Desktop/documentation.html][Marginalia]]
+
+
+** Clojure cheat sheets
+https://github.com/fogus/clojure-cheatsheets
+
+[[file:cheatsheet-a4-color.pdf][Clojure Cheatseet]]
+
+[[file:cljs-cheatsheet.pdf][ClojureScript Cheatsheet]]
+
+
 
 * JavaScript
 
