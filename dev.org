@@ -1,8 +1,11 @@
 Syed Khurram's Dev notes
 
-* Emacs
+[[https://github.com/skhurram][github]]
 
-Shortcut keys
+[[http://skhurram.github.com/][blog]]
+
+
+* Shortcut keys
 
 | Default binding | Function                        | Notes                                            |
 |-----------------+---------------------------------+--------------------------------------------------|
@@ -76,7 +79,7 @@ Shortcut keys
 | RAD / Eclipse   |                                 |                                                  |
 | C-S-M           |                                 | Add import (java.util.Date -> Date and import    |
 
-
+* emacs
 
 ** To do
 
@@ -207,6 +210,12 @@ M-x calculator
 Change input base: i (b | o | h)
 Change output base: o (b | o | h)
 
+
+** [[file:.emacs][.emacs]]
+
+
+
+
 * linux
 
 ** reload profile
@@ -225,8 +234,15 @@ $ source ~/.profile
 http://blog.jayfields.com/2010/07/clojure-destructuring.html
 
 ** ClojureScript One
-*** [[file:Desktop/documentation.html][Marginalia]]
+*** [[file:~/dev-notes/documentation.html][Marginalia]]
 
+*** [[file:One1.pdf][ClojureScript One wiki as pdf]]
+
+Arrived at the pdf from a strange route. Copy/pasted all wiki pages into OneNote. Adjusted some
+links. Then printed pdf from OneNote. Crazy! There must be a direct way to export pdf from github
+wiki.
+
+**** TODO Export github wiki to pdf
 
 ** Clojure cheat sheets
 https://github.com/fogus/clojure-cheatsheets
@@ -235,6 +251,11 @@ https://github.com/fogus/clojure-cheatsheets
 
 [[file:cljs-cheatsheet.pdf][ClojureScript Cheatsheet]]
 
+
+
+* git
+
+[[file:git_cheat_sheet.pdf][git cheat sheet by roger dudler]]
 
 
 * JavaScript

@@ -1,0 +1,66 @@
+/* CLOJURESCRIPT ONE GUIDE TOPBAR CSS
+------------------------------------------------------------------- */
+.topbar {
+  background-color: #3c4764;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  font-family: "Museo300", sans-serif;
+  font-size: 1em;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: visible;
+  width: 100%;
+  z-index: 10000;
+}
+.topbar a {
+  color: #bfbfbf;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.topbar a.brand {
+  text-decoration: none;
+}
+.topbar .brand {
+  color: #ffffff;
+  display: block;
+  font-size: 20px;
+  font-weight: 200;
+  float: left;
+  line-height: 1;
+  padding: 8px 20px 12px;
+  margin-left: -10px;
+}
+.topbar div > ul, .nav {
+  display: block;
+  float: right;
+  left: 0;
+  margin: 0 0 0 10px;
+  position: relative;
+}
+.topbar div > ul > li, .nav > li {
+  display: block;
+  float: left;
+}
+.topbar div > ul a, .nav a {
+  display: block;
+  float: none;
+  padding: 10px 10px 11px;
+  line-height: 19px;
+  text-decoration: none;
+}
+.topbar div > ul a:hover, .nav a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+.topbar div > ul .active > a, .nav .active > a {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body.uberdocs .brand {
+  padding-left: 75px;
+}
+body.uberdocs #navigation {
+  padding-right: 10px; 
+}

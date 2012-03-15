@@ -1,0 +1,262 @@
+/*********************************************************************
+CLOJURESCRIPT ONE GUIDE DOCUMENTATION CSS
+*********************************************************************/
+
+/* BASE
+------------------------------------------------------------------- */
+html {
+margin: 0;
+padding: 0;
+}
+h1 {
+margin: 0;
+padding: 0;
+}
+h2 {
+margin: 0;
+padding: 0;
+}
+h3 {
+margin: 0;
+padding: 0;
+}
+h4 {
+margin: 0;
+padding: 0;
+}
+a, a:hover, a:visited {
+  color: #248e0f;
+  text-decoration: underline;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* GENERAL LAYOUT
+------------------------------------------------------------------- */
+body {
+background-color: #f5f5ff;
+color: #40404f;
+margin: 0;
+padding: 0;
+font-size: 16px;
+font-family: "facitweb", Helvetica, sans-serif;
+}
+h1 {
+margin-top: 0;
+font-size: 20px;
+}
+a.anchor {
+color: #252519;
+text-decoration: none;
+}
+a.anchor:hover {
+color: #5050A6;
+}
+table {
+border-spacing: 0;
+}
+code {
+display: inline;
+}
+p {
+margin-top: 8px;
+}
+tr {
+margin: 0px;
+padding: 0px;
+}
+pre code {
+display: block;
+padding: 4px;
+}
+code {
+border: solid #DEDEDE 1px;
+padding-left: 3px;
+padding-right: 3px;
+font-size: 14px;
+background-color: ghostWhite;
+}
+.footer {
+background-color: #d3def7;
+background-image: url('../images/main-background-noise.png');
+border-top: 1px solid #9ac;
+color: #346;
+font-size: 14px;
+padding: 15px;
+text-align: center;
+
+}
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+/* GENERAL TYPOGRAPHY
+------------------------------------------------------------------- */
+h1.project-name {
+color: #3c4764;
+font-family: "Museo700", serif;
+text-shadow: 0 1px 0 rgba(255, 255, 255, 1.0);
+display: inline;
+font-size: 34px;
+padding-top: 60px;
+}
+h2.project-version {
+display: inline;
+margin-left: 10px;
+margin-top: 0;
+font-size: 18px;
+}
+.header h1 {
+font-family: "Chunkfive", serif;
+font-size: 3em;
+}
+.header {
+padding-top: 60px;
+}
+.docs-header {
+margin-bottom: 25px;
+padding-bottom: 10px;
+border-bottom: dotted #9ac 1px;
+}
+.plugins ul {
+padding-left: 0px;
+margin-left: 20px;
+margin-top: 0;
+padding-top: 0;
+}
+.plugins li {
+padding-left: 0;
+list-style-type: none;
+}
+.header p {
+margin-left: 20px;
+}
+.syntaxhighlighter code {
+font-size: 13px;
+}
+
+/* TABLE OF CONTENTS
+------------------------------------------------------------------- */
+a[name="toc"] {
+  color: #40404f;
+  text-decoration: none;
+}
+.toc h3 {
+  padding-top: 40px;
+}
+.toc-link {
+margin-left: 10px;
+color: #252519;
+font-size: 12px;
+text-decoration: none;
+}
+.toc-link:hover {
+color: #5050A6;
+}
+.toc h1 {
+margin: 0;
+font-size: 34px;
+}
+.toc h1 {
+font-size: 24px;
+}
+.toc {
+display: block;
+margin-bottom: 40px;
+border-bottom: solid #9ac 1px;
+}
+.toc ul {
+padding-left: 0px;
+margin-left: 20px;
+margin-top: 0;
+padding-top: 0;
+padding-bottom: 40px;
+}
+.toc li {
+padding-left: 0;
+list-style-type: none;
+}
+
+/* FLOATING TABLE OF CONTENTS
+------------------------------------------------------------------- */
+#floating-toc {
+position: fixed;
+text-align: right;
+overflow: hidden;
+top: 50px;
+right: 20px;
+height: 20px;
+}
+#floating-toc li {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/* DEPENDENCIES
+------------------------------------------------------------------- */
+.dependencies h3 {
+  padding-top: 40px;
+}
+.dependencies table {
+border: none;
+width: 99.99%;
+margin-left: 20px;
+font-size: 14px;
+}
+.dependencies td {
+padding-right: 20px;
+white-space: nowrap;
+}
+.dependencies .dotted {
+width: 99%;
+}
+.dependencies .dotted hr {
+margin-bottom: -6px;
+noshade: noshade;
+border-top: none;
+color: transparent;
+border-left: none;
+border-bottom: dotted #9ac 1px;
+border-right: none;
+background-color: transparent;
+height: 0;
+}
+.dependencies .dep-version {
+text-align: right;
+}
+
+/* TABLES
+------------------------------------------------------------------- */
+td.docs {
+background-color: #d3def7;
+background-image: url('../images/main-background-noise.png');
+border: none;
+margin: 0px;
+padding-left: 55px;
+width: 410px;
+padding-right: 20px;
+vertical-align: top;
+max-width: 410px;
+}
+td.docs pre {
+font-size: 12px;
+overflow: hidden;
+}
+td.codes {
+background-color: #f5f5ff;
+border: none;
+margin: 0px;
+padding-left: 20px;
+width: 55%;
+border-left: solid #9ac 1px;
+font-size: 10pt;
+vertical-align: top;
+overflow: hidden;
+}
+td.spacer {
+padding-bottom: 40px;
+}
