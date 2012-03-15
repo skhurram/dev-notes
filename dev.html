@@ -7,7 +7,7 @@ lang="en" xml:lang="en">
 <title>Syed Khurram's Dev notes</title>
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2012-03-14 13:58:35 "/>
+<meta name="generated" content="2012-03-15 15:14:38 "/>
 <meta name="author" content=""/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -82,43 +82,77 @@ lang="en" xml:lang="en">
 <div id="content">
 
 <h1 class="title">Syed Khurram's Dev notes</h1>
+<p><a href="https://github.com/skhurram">github</a>
+</p>
+<p>
+<a href="http://skhurram.github.com/">blog</a>
+</p>
+
 
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 Emacs </a>
+<li><a href="#sec-1">1 Shortcut keys </a></li>
+<li><a href="#sec-2">2 emacs </a>
 <ul>
-<li><a href="#sec-1_1">1.1 To do </a>
+<li><a href="#sec-2_1">2.1 To do </a>
 <ul>
-<li><a href="#sec-1_1_1">1.1.1 Sane redo </a></li>
+<li><a href="#sec-2_1_1">2.1.1 Sane redo </a></li>
 </ul>
 </li>
-<li><a href="#sec-1_2">1.2 Keyboard macros </a></li>
-<li><a href="#sec-1_3">1.3 Links </a></li>
-<li><a href="#sec-1_4">1.4 org </a></li>
-<li><a href="#sec-1_5">1.5 little hacks </a>
+<li><a href="#sec-2_2">2.2 Keyboard macros </a>
 <ul>
-<li><a href="#sec-1_5_1">1.5.1 Default folder </a></li>
-<li><a href="#sec-1_5_2">1.5.2 Export dev notes </a></li>
+<li><a href="#sec-2_2_1">2.2.1 temporary example </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_3">2.3 Links </a></li>
+<li><a href="#sec-2_4">2.4 org </a></li>
+<li><a href="#sec-2_5">2.5 little hacks </a>
+<ul>
+<li><a href="#sec-2_5_1">2.5.1 Default folder </a></li>
+<li><a href="#sec-2_5_2">2.5.2 Export dev notes </a></li>
+<li><a href="#sec-2_5_3">2.5.3 </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_6">2.6 mark ring </a>
+<ul>
+<li><a href="#sec-2_6_1">2.6.1 How do we move forward in mark ring once we've gone back? </a></li>
+</ul>
+</li>
+<li><a href="#sec-2_7">2.7 registers </a></li>
+<li><a href="#sec-2_8">2.8 calculator </a></li>
+<li><a href="#sec-2_9">2.9 .emacs </a></li>
+<li><a href="#sec-2_10">2.10 desktop and other layout </a>
+<ul>
+<li><a href="#sec-2_10_1">2.10.1 How to save / restore desktop? </a></li>
+<li><a href="#sec-2_10_2">2.10.2 How to save / restore buffers? Open a number of buffers on startup. </a></li>
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-2">2 linux </a></li>
-<li><a href="#sec-3">3 Clojure </a>
+<li><a href="#sec-3">3 linux </a>
 <ul>
-<li><a href="#sec-3_1">3.1 destructuring </a></li>
-<li><a href="#sec-3_2">3.2 ClojureScript One </a>
-<ul>
-<li><a href="#sec-3_2_1">3.2.1 Marginalia </a></li>
-</ul></li>
+<li><a href="#sec-3_1">3.1 reload profile </a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4 JavaScript </a></li>
-<li><a href="#sec-5">5 Misc </a>
+<li><a href="#sec-4">4 Clojure </a>
 <ul>
-<li><a href="#sec-5_1">5.1 export git hub wiki into pdf </a></li>
-<li><a href="#sec-5_2">5.2 calculate date difference using Joda time </a></li>
+<li><a href="#sec-4_1">4.1 destructuring </a></li>
+<li><a href="#sec-4_2">4.2 ClojureScript One </a>
+<ul>
+<li><a href="#sec-4_2_1">4.2.1 Marginalia </a></li>
+<li><a href="#sec-4_2_2">4.2.2 ClojureScript One wiki as pdf </a></li>
+</ul>
+</li>
+<li><a href="#sec-4_3">4.3 Clojure cheat sheets </a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 git </a></li>
+<li><a href="#sec-6">6 JavaScript </a></li>
+<li><a href="#sec-7">7 Misc </a>
+<ul>
+<li><a href="#sec-7_1">7.1 export git hub wiki into pdf </a></li>
+<li><a href="#sec-7_2">7.2 calculate date difference using Joda time </a></li>
 </ul>
 </li>
 </ul>
@@ -126,13 +160,10 @@ lang="en" xml:lang="en">
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Emacs </h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Shortcut keys </h2>
 <div class="outline-text-2" id="text-1">
 
 
-<p>
-Shortcut keys
-</p>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" />
@@ -141,9 +172,18 @@ Shortcut keys
 <tr><th scope="col" class="left">Default binding</th><th scope="col" class="left">Function</th><th scope="col" class="left">Notes</th></tr>
 </thead>
 <tbody>
+<tr><td class="left">C-x d</td><td class="left">ido-dired</td><td class="left">Change directory</td></tr>
+<tr><td class="left">C-x C-s</td><td class="left"></td><td class="left">save file</td></tr>
+<tr><td class="left">C-x C-w</td><td class="left"></td><td class="left">save as</td></tr>
+<tr><td class="left">C-x k</td><td class="left"></td><td class="left">kill buffer</td></tr>
+<tr><td class="left">C-x C-v</td><td class="left"></td><td class="left">reload file</td></tr>
+<tr><td class="left">C-x C-q</td><td class="left"></td><td class="left">toggle readonly</td></tr>
+<tr><td class="left">M-/ (or tab)</td><td class="left"></td><td class="left">complete word</td></tr>
+<tr><td class="left">Editing</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">M-y</td><td class="left">cua-paste-pop</td><td class="left">Show kill ring</td></tr>
 <tr><td class="left">C-h m</td><td class="left"></td><td class="left">describe-mode   (current mode)</td></tr>
-<tr><td class="left">M-g M-g</td><td class="left"></td><td class="left">goto line</td></tr>
-<tr><td class="left">C-l</td><td class="left"></td><td class="left">goto line</td></tr>
+<tr><td class="left">M-g M-g (M-g g)</td><td class="left">goto-line</td><td class="left">goto line</td></tr>
+<tr><td class="left">C-l</td><td class="left">goto-line</td><td class="left">goto line</td></tr>
 <tr><td class="left">M-q</td><td class="left"></td><td class="left">reformat paragraph</td></tr>
 <tr><td class="left">C-x C-+</td><td class="left"></td><td class="left">increase font size</td></tr>
 <tr><td class="left">C-x C&ndash;</td><td class="left"></td><td class="left">decrease font size</td></tr>
@@ -151,26 +191,57 @@ Shortcut keys
 <tr><td class="left">C-c C-e</td><td class="left"></td><td class="left">export / publish org</td></tr>
 <tr><td class="left">M-C-SPC</td><td class="left"></td><td class="left">Select from current position to end of next sexp</td></tr>
 <tr><td class="left">M-C-@</td><td class="left"></td><td class="left">-do-</td></tr>
+<tr><td class="left">Search</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">C-s</td><td class="left"></td><td class="left">search forward regexp</td></tr>
+<tr><td class="left">C-r</td><td class="left"></td><td class="left">search backward</td></tr>
+<tr><td class="left"></td><td class="left">multi-occur-in-matching-buffers</td><td class="left">Search all or some open buffers</td></tr>
+<tr><td class="left"></td><td class="left">M-x occur</td><td class="left">List occurrences</td></tr>
+<tr><td class="left"></td><td class="left">M-x rgrep</td><td class="left">run grep</td></tr>
+<tr><td class="left">C-M-s</td><td class="left"></td><td class="left">non-regex search</td></tr>
 <tr><td class="left">M-%</td><td class="left">query-replace</td><td class="left"></td></tr>
+<tr><td class="left">M-$</td><td class="left"></td><td class="left">spell check current word</td></tr>
+<tr><td class="left">M-x ispell</td><td class="left">ispell</td><td class="left">spell check whole buffer</td></tr>
+<tr><td class="left">Navigation</td><td class="left"></td><td class="left"></td></tr>
+<tr><td class="left">C-u C-SPC</td><td class="left"></td><td class="left">move back in mark ring (local and global)</td></tr>
+<tr><td class="left">C-x C-@</td><td class="left"></td><td class="left">-do-</td></tr>
+<tr><td class="left">C-M-b</td><td class="left"></td><td class="left">move back by word (sexp in lisp mode)</td></tr>
+<tr><td class="left">C-M-f</td><td class="left"></td><td class="left">move forward by word</td></tr>
+<tr><td class="left">C-M-b</td><td class="left"></td><td class="left">select from current point to start of word</td></tr>
+<tr><td class="left">C-M-f</td><td class="left"></td><td class="left">select from current point to end of word</td></tr>
+<tr><td class="left">C-M-d</td><td class="left"></td><td class="left">down in list</td></tr>
+<tr><td class="left">C-M-u</td><td class="left"></td><td class="left">up in list</td></tr>
+<tr><td class="left">C-M-a</td><td class="left"></td><td class="left">select from point to start of def</td></tr>
+<tr><td class="left">C-M-e</td><td class="left"></td><td class="left">select from point to end of def</td></tr>
+<tr><td class="left">C-x r SPC &lt;chr></td><td class="left">point-to-register</td><td class="left">Save current location in register &lt;chr&gt;</td></tr>
+<tr><td class="left">C-x r j &lt;chr&gt;</td><td class="left"></td><td class="left">Go back to that location</td></tr>
+<tr><td class="left"></td><td class="left">list-registers</td><td class="left">Show a list of registers.</td></tr>
 <tr><td class="left">Macros</td><td class="left"></td><td class="left"></td></tr>
 <tr><td class="left">C-x (</td><td class="left"></td><td class="left">start recording macro</td></tr>
 <tr><td class="left">C-x )</td><td class="left"></td><td class="left">stop recording macro</td></tr>
 <tr><td class="left">C-x e</td><td class="left"></td><td class="left">execute macro (e to repeat)</td></tr>
 <tr><td class="left">C-u 10 C-x e</td><td class="left"></td><td class="left">execute macro 10 times</td></tr>
+<tr><td class="left">M-x calculator</td><td class="left">calculator</td><td class="left">Interactive calculator</td></tr>
 <tr><td class="left">RAD / Eclipse</td><td class="left"></td><td class="left"></td></tr>
 <tr><td class="left">C-S-M</td><td class="left"></td><td class="left">Add import (java.util.Date -&gt; Date and import</td></tr>
 </tbody>
 </table>
 
 
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> emacs </h2>
+<div class="outline-text-2" id="text-2">
 
 
 
 </div>
 
-<div id="outline-container-1_1" class="outline-3">
-<h3 id="sec-1_1"><span class="section-number-3">1.1</span> To do </h3>
-<div class="outline-text-3" id="text-1_1">
+<div id="outline-container-2_1" class="outline-3">
+<h3 id="sec-2_1"><span class="section-number-3">2.1</span> To do </h3>
+<div class="outline-text-3" id="text-2_1">
 
 
 <p>
@@ -182,9 +253,9 @@ winner-mode
 
 </div>
 
-<div id="outline-container-1_1_1" class="outline-4">
-<h4 id="sec-1_1_1"><span class="section-number-4">1.1.1</span> <span class="todo TODO"> TODO</span> Sane redo </h4>
-<div class="outline-text-4" id="text-1_1_1">
+<div id="outline-container-2_1_1" class="outline-4">
+<h4 id="sec-2_1_1"><span class="section-number-4">2.1.1</span> <span class="todo TODO"> TODO</span> Sane redo </h4>
+<div class="outline-text-4" id="text-2_1_1">
 
 
 </div>
@@ -192,9 +263,9 @@ winner-mode
 
 </div>
 
-<div id="outline-container-1_2" class="outline-3">
-<h3 id="sec-1_2"><span class="section-number-3">1.2</span> Keyboard macros </h3>
-<div class="outline-text-3" id="text-1_2">
+<div id="outline-container-2_2" class="outline-3">
+<h3 id="sec-2_2"><span class="section-number-3">2.2</span> Keyboard macros </h3>
+<div class="outline-text-3" id="text-2_2">
 
 
 <p>
@@ -205,18 +276,47 @@ C-x )    Stop recording
 C-x e    execute macro (e to repeat)
 C-u 10 C-x e  execute macro 10 times
 </p>
-
 <p>
 <a href="http://www.emacswiki.org/emacs/KeyboardMacros">http://www.emacswiki.org/emacs/KeyboardMacros</a>
+</p>
+<p>
 <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros">http://www.gnu.org/software/emacs/manual/html_node/emacs/Keyboard-Macros.html#Keyboard-Macros</a>
 </p>
+
+</div>
+
+<div id="outline-container-2_2_1" class="outline-4">
+<h4 id="sec-2_2_1"><span class="section-number-4">2.2.1</span> temporary example </h4>
+<div class="outline-text-4" id="text-2_2_1">
+
+
+<p>
+Keyboard Macros
+</p>
+<p>
+Begin recording: C-x (
+End recording: C-x )
+Execute macro: C-x e
+Example: Add 'extern' before all function protoypes in a file.
+Go to the first prototype, and say:
+</p>
+<p>
+    C-x (
+    C-a
+    extern&lt;SPACE&gt;
+    C-n
+    C-x )
+Then say C-u 50 C-x e to replace 50 prototypes.
+</p>
+
+</div>
 </div>
 
 </div>
 
-<div id="outline-container-1_3" class="outline-3">
-<h3 id="sec-1_3"><span class="section-number-3">1.3</span> Links </h3>
-<div class="outline-text-3" id="text-1_3">
+<div id="outline-container-2_3" class="outline-3">
+<h3 id="sec-2_3"><span class="section-number-3">2.3</span> Links </h3>
+<div class="outline-text-3" id="text-2_3">
 
 <p><a href="http://www.learningclojure.com/2009/12/favourite-keys-for-emacs-and-slime.html">Learning Clojure: Favourite keys for EMACS and SLIME</a>
 </p>
@@ -231,9 +331,9 @@ C-u 10 C-x e  execute macro 10 times
 
 </div>
 
-<div id="outline-container-1_4" class="outline-3">
-<h3 id="sec-1_4"><span class="section-number-3">1.4</span> org </h3>
-<div class="outline-text-3" id="text-1_4">
+<div id="outline-container-2_4" class="outline-3">
+<h3 id="sec-2_4"><span class="section-number-3">2.4</span> org </h3>
+<div class="outline-text-3" id="text-2_4">
 
 <p><a href="file://d:/docs/Misc/emacs/orgcard-7.8.pdf">org-mode reference</a>
 </p>
@@ -244,17 +344,17 @@ C-u 10 C-x e  execute macro 10 times
 
 </div>
 
-<div id="outline-container-1_5" class="outline-3">
-<h3 id="sec-1_5"><span class="section-number-3">1.5</span> little hacks </h3>
-<div class="outline-text-3" id="text-1_5">
+<div id="outline-container-2_5" class="outline-3">
+<h3 id="sec-2_5"><span class="section-number-3">2.5</span> little hacks </h3>
+<div class="outline-text-3" id="text-2_5">
 
 
 
 </div>
 
-<div id="outline-container-1_5_1" class="outline-4">
-<h4 id="sec-1_5_1"><span class="section-number-4">1.5.1</span> Default folder </h4>
-<div class="outline-text-4" id="text-1_5_1">
+<div id="outline-container-2_5_1" class="outline-4">
+<h4 id="sec-2_5_1"><span class="section-number-4">2.5.1</span> Default folder </h4>
+<div class="outline-text-4" id="text-2_5_1">
 
 <p>When emacs starts, the home folder should be the current folder. Put this in .emacs, 
 </p>
@@ -265,9 +365,9 @@ C-u 10 C-x e  execute macro 10 times
 
 </div>
 
-<div id="outline-container-1_5_2" class="outline-4">
-<h4 id="sec-1_5_2"><span class="section-number-4">1.5.2</span> Export dev notes </h4>
-<div class="outline-text-4" id="text-1_5_2">
+<div id="outline-container-2_5_2" class="outline-4">
+<h4 id="sec-2_5_2"><span class="section-number-4">2.5.2</span> Export dev notes </h4>
+<div class="outline-text-4" id="text-2_5_2">
 
 
 <p>
@@ -280,62 +380,467 @@ This will export to org.html and also open the file in browser.
 <p>
 C-c C-e h Export only 
 </p>
+
 </div>
+
+</div>
+
+<div id="outline-container-2_5_3" class="outline-4">
+<h4 id="sec-2_5_3"><span class="section-number-4">2.5.3</span> </h4>
+<div class="outline-text-4" id="text-2_5_3">
+
+
+<p>
+;; save and restore my buffers every time
+(desktop-save-mode 1)
+</p>
+<p>
+;; show me line and column nos
+(line-number-mode t)
+(column-number-mode t)
+</p>
+<p>
+;; cscope
+(require 'xcscope)
+(setq cscope-do-not-update-database t)
+</p>
+<p>
+;; show date and time in mode-line
+(setq display-time-day-and-date t )
+</p>
+<p>
+(display-time)
+</p>
+
+
+
+
 </div>
 </div>
 
 </div>
 
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> linux </h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-2_6" class="outline-3">
+<h3 id="sec-2_6"><span class="section-number-3">2.6</span> mark ring </h3>
+<div class="outline-text-3" id="text-2_6">
+
+<p>There are local and global mark rings.
+</p>
+<p>
+cua-set-mark 
+</p>
+<p>
+Default bindings: C-@ and C-SPC
+</p>
+<p>
+Toggle mark.
+</p>
+
+<p>
+Move back in mark ring using all of these command.
+C-u C-SPC
+C-u C-@
+</p>
+<p>
+C-x C-SPC
+C-x C-@
+</p>
+
+</div>
+
+<div id="outline-container-2_6_1" class="outline-4">
+<h4 id="sec-2_6_1"><span class="section-number-4">2.6.1</span> <span class="todo TODO"> TODO</span> How do we move forward in mark ring once we've gone back? </h4>
+<div class="outline-text-4" id="text-2_6_1">
 
 
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2_7" class="outline-3">
+<h3 id="sec-2_7"><span class="section-number-3">2.7</span> registers </h3>
+<div class="outline-text-3" id="text-2_7">
+
+<p>point-to-register
+</p>
+<p>
+C-x r SPC a           Save current location in register a
+</p>
+<p>
+C-x r j a             Go back to that location or restore that configuration.
+</p>
+<p>
+Registers are characters
+</p>
+<p>
+List of registers   list-registers in register.el
+</p>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2_8" class="outline-3">
+<h3 id="sec-2_8"><span class="section-number-3">2.8</span> calculator </h3>
+<div class="outline-text-3" id="text-2_8">
+
+<p>M-x calculator
+</p>
+
+<p>
+Change input base: i (b | o | h)
+Change output base: o (b | o | h)
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-2_9" class="outline-3">
+<h3 id="sec-2_9"><span class="section-number-3">2.9</span> <a href=".emacs">.emacs</a> </h3>
+<div class="outline-text-3" id="text-2_9">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2_10" class="outline-3">
+<h3 id="sec-2_10"><span class="section-number-3">2.10</span> desktop and other layout </h3>
+<div class="outline-text-3" id="text-2_10">
+
+
+
+</div>
+
+<div id="outline-container-2_10_1" class="outline-4">
+<h4 id="sec-2_10_1"><span class="section-number-4">2.10.1</span> <span class="todo TODO"> TODO</span> How to save / restore desktop? </h4>
+<div class="outline-text-4" id="text-2_10_1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2_10_2" class="outline-4">
+<h4 id="sec-2_10_2"><span class="section-number-4">2.10.2</span> <span class="todo TODO"> TODO</span> How to save / restore buffers? Open a number of buffers on startup. </h4>
+<div class="outline-text-4" id="text-2_10_2">
+
+
+
+</div>
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Clojure </h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> linux </h2>
 <div class="outline-text-2" id="text-3">
+
 
 
 </div>
 
 <div id="outline-container-3_1" class="outline-3">
-<h3 id="sec-3_1"><span class="section-number-3">3.1</span> destructuring </h3>
+<h3 id="sec-3_1"><span class="section-number-3">3.1</span> reload profile </h3>
 <div class="outline-text-3" id="text-3_1">
 
 
-
 <p>
-<a href="http://blog.jayfields.com/2010/07/clojure-destructuring.html">http://blog.jayfields.com/2010/07/clojure-destructuring.html</a>
+After changing the bash profile, you need to reload it:
 </p>
-</div>
+<p>
+$ source ~/.bashrc
+</p>
+<p>
+$ source ~/.profile
+</p>
 
-</div>
-
-<div id="outline-container-3_2" class="outline-3">
-<h3 id="sec-3_2"><span class="section-number-3">3.2</span> ClojureScript One </h3>
-<div class="outline-text-3" id="text-3_2">
-
-
-</div>
-
-<div id="outline-container-3_2_1" class="outline-4">
-<h4 id="sec-3_2_1"><span class="section-number-4">3.2.1</span> <a href="Desktop/documentation.html">Marginalia</a> </h4>
-<div class="outline-text-4" id="text-3_2_1">
-
-
-</div>
 </div>
 </div>
 
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> JavaScript </h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Clojure </h2>
 <div class="outline-text-2" id="text-4">
+
+
+<p>
+Use project <a href="file://d:/docs/Clojure/projects/clj">here</a> to try out code. 
+</p>
+<p>
+Click on the link and a dired buffer will open. From there use 
+</p>
+<p>
+M-x clojure-jack-in
+</p>
+<p>
+to run swank and connect slime into it.
+</p>
+
+</div>
+
+<div id="outline-container-4_1" class="outline-3">
+<h3 id="sec-4_1"><span class="section-number-3">4.1</span> destructuring </h3>
+<div class="outline-text-3" id="text-4_1">
+
+
+<p>
+<a href="http://blog.jayfields.com/2010/07/clojure-destructuring.html">Clojure: Destructuring by Jay Fields</a>
+</p>
+<p>
+Assign the values of a vector:
+</p>
+<p>
+user=&gt; (def point [5 7])
+</p>
+<p>
+user=&gt; (let [[x y] point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+</p>
+<p>
+Split a vector into a head and a tail:
+</p>
+<p>
+user=&gt; (def indexes [1 2 3])
+</p>
+<p>
+user=> (let [[x &amp; more] indexes]
+         (println "x:" x "more:" more))
+x: 1 more: (2 3)
+</p>
+<p>
+Note the use of arglist**. It can be used in function parameters and in destructuring.
+</p>
+<p>
+Bind the entire vector to a local using :as
+</p>
+<p>
+user=&gt; (def indexes [1 2 3])
+</p>
+<p>
+user=> (let [[x &amp; more :as full-list] indexes]
+         (println "x:" x "more:" more "full list:" full-list))
+x: 1 more: (2 3) full list: [1 2 3]
+</p>
+
+<p>
+Destructuring a map
+</p>
+<p>
+user=&gt; (def point {:x 5 :y 7})
+</p>
+<p>
+user=&gt; (let [{x :x y :y} point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+</p>
+<p>
+The use of :keys directive while destruturing a map
+</p>
+<p>
+As the above illustrates, we often need to have local variables to be named as the keys of the map
+we are destructuring. To avoid doing it manually, :keys directive is provided:
+</p>
+<p>
+user=&gt; (def point {:x 5 :y 7})
+</p>
+<p>
+user=&gt; (let [{:keys [x y]} point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+</p>
+<p>
+It is also possible to use both :keys and :as directives:
+</p>
+<p>
+user=&gt; (def point {:x 5 :y 7})
+</p>
+<p>
+user=&gt; (let [{:keys [x y] :as the-point} point]
+         (println "x:" x "y:" y "point:" the-point))
+x: 5 y: 7 point: {:x 5, :y 7}
+</p>
+<p>
+The :or directive
+Assign a default value to a key when the map does not contain a specified key:
+</p>
+<p>
+user=&gt; (def point {:y 7})
+</p>
+<p> 
+user=&gt; (let [{:keys [x y] :or {x 0 y 0}} point]
+         (println "x:" x "y:" y))
+x: 0 y: 7
+</p>
+<p>
+Lastly, it's also worth noting that you can destructure nested maps, vectors and a combination of both.
+</p>
+<p>
+The following example destructures a nested map
+</p>
+<p>
+user=&gt; (def book {:name "SICP" :details {:pages 657 :isbn-10 "0262011530"}})
+</p>
+<p>
+user=&gt; (let [{name :name {pages :pages isbn-10 :isbn-10} :details} book]
+         (println "name:" name "pages:" pages "isbn-10:" isbn-10))
+name: SICP pages: 657 isbn-10: 0262011530
+</p>
+
+<p>
+As you would expect, you can also use directives while destructuring nested maps.
+</p>
+<p>
+user=&gt; (def book {:name "SICP" :details {:pages 657 :isbn-10 "0262011530"}})
+user=&gt; 
+user=&gt; (let [{name :name {:keys [pages isbn-10]} :details} book]
+         (println "name:" name "pages:" pages "isbn-10:" isbn-10))
+name: SICP pages: 657 isbn-10: 0262011530
+</p>
+<p>
+Destructuring nested vectors is also very straight-forward, as the following example illustrates
+</p>
+<p>
+user=&gt; (def numbers <a href="#1--2">3 4</a>)
+</p>
+<p>
+user=&gt; (let <a href="#a--b">c d</a> numbers]
+  (println "a:" a "b:" b "c:" c "d:" d))
+a: 1 b: 2 c: 3 d: 4
+</p>
+<p>
+The following example destructures a map and a vector at the same time.
+user=&gt; (def golfer {:name "Jim" :scores [3 5 4 5]})
+</p>
+<p>
+user=&gt; (let [{name :name [hole1 hole2] :scores} golfer] 
+         (println "name:" name "hole1:" hole1 "hole2:" hole2))
+name: Jim hole1: 3 hole2: 5
+The same example can be rewritten using a function definition to show the simplicity of using destructuring in parameter lists.
+user=&gt; (defn print-status [{name :name [hole1 hole2] :scores}] 
+  (println "name:" name "hole1:" hole1 "hole2:" hole2))
+</p>
+<p>
+user=&gt; (print-status {:name "Jim" :scores [3 5 4 5]})
+name: Jim hole1: 3 hole2: 5
+There are other (less used) directives and deeper explanations available on <a href="http://clojure.org/special_forms">http://clojure.org/special_forms</a> and in The Joy of Clojure. I recommend both.
+</p>
+<p>
+**(defn do-something [x y &amp; more] &hellip; )
+</p>
+<p>
+Comment by Fogus:
+</p>
+<p>
+Nice post. One other note that naturally follows from the end of your post is that destructuring forms the basis of Clojure's named arguments:
+</p>
+<p>
+(defn print-status [&amp; {name :name [hole1 hole2] :scores}] 
+(println "name:" name "hole1:" hole1 "hole2:" hole2))
+</p>
+<p>
+(print-status :name "Joey" :scores [42 18])
+</p>
+
+<p>
+You can also use pre-conditions to check if certain arguments are passed in:
+</p>
+
+<p>
+(defn print-status [&amp; {name :name [hole1 hole2] :scores}]
+{:pre [name]}
+(println "name:" name "hole1:" hole1 "hole2:" hole2))
+</p>
+<p>
+(print-status :scores [42 18])
+; java.lang.AssertionError: Assert failed: name
+</p>
+<p>
+(print-status :name "Joey" :scores [42 18])
+; name: Joey hole1: 42 hole2: 18
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-4_2" class="outline-3">
+<h3 id="sec-4_2"><span class="section-number-3">4.2</span> ClojureScript One </h3>
+<div class="outline-text-3" id="text-4_2">
+
+
+</div>
+
+<div id="outline-container-4_2_1" class="outline-4">
+<h4 id="sec-4_2_1"><span class="section-number-4">4.2.1</span> <a href="file://c:/Users/cssosns/dev-notes/documentation.html">Marginalia</a> </h4>
+<div class="outline-text-4" id="text-4_2_1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4_2_2" class="outline-4">
+<h4 id="sec-4_2_2"><span class="section-number-4">4.2.2</span> <a href="One1.pdf">ClojureScript One wiki as pdf</a> </h4>
+<div class="outline-text-4" id="text-4_2_2">
+
+
+<p>
+Arrived at the pdf from a strange route. Copy/pasted all wiki pages into OneNote. Adjusted some
+links. Then printed pdf from OneNote. Crazy! There must be a direct way to export pdf from github
+wiki.
+</p>
+<ul>
+<li id="sec-4_2_2_1"><span class="todo TODO"> TODO</span> Export github wiki to pdf <br/>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4_3" class="outline-3">
+<h3 id="sec-4_3"><span class="section-number-3">4.3</span> Clojure cheat sheets </h3>
+<div class="outline-text-3" id="text-4_3">
+
+<p><a href="https://github.com/fogus/clojure-cheatsheets">https://github.com/fogus/clojure-cheatsheets</a>
+</p>
+<p>
+<a href="cheatsheet-a4-color.pdf">Clojure Cheatseet</a>
+</p>
+<p>
+<a href="cljs-cheatsheet.pdf">ClojureScript Cheatsheet</a>
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> git </h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+<a href="git_cheat_sheet.pdf">git cheat sheet by roger dudler</a>
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> JavaScript </h2>
+<div class="outline-text-2" id="text-6">
 
 
 <p>
@@ -348,17 +853,17 @@ C-c C-e h Export only
 
 </div>
 
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Misc </h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Misc </h2>
+<div class="outline-text-2" id="text-7">
 
 
 
 </div>
 
-<div id="outline-container-5_1" class="outline-3">
-<h3 id="sec-5_1"><span class="section-number-3">5.1</span> <span class="todo TODO"> TODO</span> export git hub wiki into pdf </h3>
-<div class="outline-text-3" id="text-5_1">
+<div id="outline-container-7_1" class="outline-3">
+<h3 id="sec-7_1"><span class="section-number-3">7.1</span> <span class="todo TODO"> TODO</span> export git hub wiki into pdf </h3>
+<div class="outline-text-3" id="text-7_1">
 
 
 <p>
@@ -368,9 +873,9 @@ I want to read <a href="https://github.com/brentonashworth/one/wiki">one</a> wik
 
 </div>
 
-<div id="outline-container-5_2" class="outline-3">
-<h3 id="sec-5_2"><span class="section-number-3">5.2</span> calculate date difference using Joda time </h3>
-<div class="outline-text-3" id="text-5_2">
+<div id="outline-container-7_2" class="outline-3">
+<h3 id="sec-7_2"><span class="section-number-3">7.2</span> calculate date difference using Joda time </h3>
+<div class="outline-text-3" id="text-7_2">
 
 <p>This is just insanely intuitive!
 </p>

@@ -213,7 +213,11 @@ Change output base: o (b | o | h)
 
 ** [[file:.emacs][.emacs]]
 
+** desktop and other layout
 
+*** TODO How to save / restore desktop?
+
+*** TODO How to save / restore buffers? Open a number of buffers on startup.
 
 
 * linux
@@ -228,10 +232,160 @@ $ source ~/.profile
 
 
 * Clojure
+
+Use project [[file:d:/docs/Clojure/projects/clj][here]] to try out code. 
+
+Click on the link and a dired buffer will open. From there use 
+
+M-x clojure-jack-in
+
+to run swank and connect slime into it.
+
 ** destructuring
 
+[[http://blog.jayfields.com/2010/07/clojure-destructuring.html][Clojure: Destructuring by Jay Fields]]
 
-http://blog.jayfields.com/2010/07/clojure-destructuring.html
+Assign the values of a vector:
+
+user=> (def point [5 7])
+#'user/point
+
+user=> (let [[x y] point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+
+Split a vector into a head and a tail:
+
+user=> (def indexes [1 2 3])
+#'user/indexes
+
+user=> (let [[x & more] indexes]
+         (println "x:" x "more:" more))
+x: 1 more: (2 3)
+
+Note the use of arglist**. It can be used in function parameters and in destructuring.
+
+Bind the entire vector to a local using :as
+
+user=> (def indexes [1 2 3])
+#'user/indexes
+
+user=> (let [[x & more :as full-list] indexes]
+         (println "x:" x "more:" more "full list:" full-list))
+x: 1 more: (2 3) full list: [1 2 3]
+
+
+Destructuring a map
+
+user=> (def point {:x 5 :y 7})
+#'user/point
+
+user=> (let [{x :x y :y} point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+
+The use of :keys directive while destruturing a map
+
+As the above illustrates, we often need to have local variables to be named as the keys of the map
+we are destructuring. To avoid doing it manually, :keys directive is provided:
+
+user=> (def point {:x 5 :y 7})
+#'user/point
+
+user=> (let [{:keys [x y]} point]
+         (println "x:" x "y:" y))
+x: 5 y: 7
+
+It is also possible to use both :keys and :as directives:
+
+user=> (def point {:x 5 :y 7})
+#'user/point
+
+user=> (let [{:keys [x y] :as the-point} point]
+         (println "x:" x "y:" y "point:" the-point))
+x: 5 y: 7 point: {:x 5, :y 7}
+
+The :or directive
+Assign a default value to a key when the map does not contain a specified key:
+
+user=> (def point {:y 7})
+#'user/point
+ 
+user=> (let [{:keys [x y] :or {x 0 y 0}} point]
+         (println "x:" x "y:" y))
+x: 0 y: 7
+
+Lastly, it's also worth noting that you can destructure nested maps, vectors and a combination of both.
+
+The following example destructures a nested map
+
+user=> (def book {:name "SICP" :details {:pages 657 :isbn-10 "0262011530"}})
+#'user/book
+
+user=> (let [{name :name {pages :pages isbn-10 :isbn-10} :details} book]
+         (println "name:" name "pages:" pages "isbn-10:" isbn-10))
+name: SICP pages: 657 isbn-10: 0262011530
+
+
+As you would expect, you can also use directives while destructuring nested maps.
+
+user=> (def book {:name "SICP" :details {:pages 657 :isbn-10 "0262011530"}})
+#'user/book
+user=> 
+user=> (let [{name :name {:keys [pages isbn-10]} :details} book]
+         (println "name:" name "pages:" pages "isbn-10:" isbn-10))
+name: SICP pages: 657 isbn-10: 0262011530
+
+Destructuring nested vectors is also very straight-forward, as the following example illustrates
+
+user=> (def numbers [[1 2][3 4]])
+#'user/numbers
+
+user=> (let [[[a b][c d]] numbers]
+  (println "a:" a "b:" b "c:" c "d:" d))
+a: 1 b: 2 c: 3 d: 4
+
+The following example destructures a map and a vector at the same time.
+user=> (def golfer {:name "Jim" :scores [3 5 4 5]})
+#'user/golfer
+
+user=> (let [{name :name [hole1 hole2] :scores} golfer] 
+         (println "name:" name "hole1:" hole1 "hole2:" hole2))
+name: Jim hole1: 3 hole2: 5
+The same example can be rewritten using a function definition to show the simplicity of using destructuring in parameter lists.
+user=> (defn print-status [{name :name [hole1 hole2] :scores}] 
+  (println "name:" name "hole1:" hole1 "hole2:" hole2))
+#'user/print-status
+
+user=> (print-status {:name "Jim" :scores [3 5 4 5]})
+name: Jim hole1: 3 hole2: 5
+There are other (less used) directives and deeper explanations available on http://clojure.org/special_forms and in The Joy of Clojure. I recommend both.
+
+**(defn do-something [x y & more] ... )
+
+Comment by Fogus:
+
+Nice post. One other note that naturally follows from the end of your post is that destructuring forms the basis of Clojure's named arguments:
+
+(defn print-status [& {name :name [hole1 hole2] :scores}] 
+(println "name:" name "hole1:" hole1 "hole2:" hole2))
+
+(print-status :name "Joey" :scores [42 18])
+
+
+You can also use pre-conditions to check if certain arguments are passed in:
+
+
+(defn print-status [& {name :name [hole1 hole2] :scores}]
+{:pre [name]}
+(println "name:" name "hole1:" hole1 "hole2:" hole2))
+
+(print-status :scores [42 18])
+; java.lang.AssertionError: Assert failed: name
+
+(print-status :name "Joey" :scores [42 18])
+; name: Joey hole1: 42 hole2: 18
+
 
 ** ClojureScript One
 *** [[file:~/dev-notes/documentation.html][Marginalia]]
