@@ -1,0 +1,146 @@
+
+JavaScript the good parts
+
+Listening to the Google talk 
+JavaScript: the Good Parts
+
+by Doug Crockford
+
+at http://www.youtube.com/watch?v=hQVTIJBZook
+
+
+
+Prototypal inheritance
+
+if (typeof Object.create !== 'function') {
+  Oject.create = function (o) {
+    function F() {}
+    F.prototype = o;
+    return new F();
+  };
+}
+
+What is happening here?
+
+typeof checks to see if Object has a create function.
+
+if (typeof Object.create !=== 'function')
+
+
+We use the three equals operator instead of the two equals operator (==). The two equals operator
+should be avoid completely.
+
+The next part of the code creates a new function and assigns it to Object.create.
+
+This means we can actually assign a function to an object.
+
+In JavaScript, objects inherit from other objects. There is no concept of class inheriting from a
+class. 
+
+I don't understand the rest:
+
+Object.create = function (o) {
+  function F() = {}
+  F.prototype = o;
+  return new F();
+};
+
+Need to investigate what is going on here.
+
+Digit function
+Pass a number and the function returns the English word for that number.
+
+var names = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
+var digit_name = function (n) {
+  return names[n];
+};
+
+alert(digit_name(3));  // 'three'
+
+
+The global variables are really bad thing.
+
+JavaScript provides a function scope. It does not have the block scope.
+
+var digit_name = function (n) {
+  var names = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  return names[n];
+};
+
+This gives us performance penalty in that the names array is initialized each time the function is
+called.
+
+How do we resolve this using closure?
+
+var digit_name = function () {
+  var names = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+
+  return function (n) {
+    return names[n];
+  };
+}();
+
+What is happening here?
+
+digit_name is a function that returns a function and immediately calls it (the last line () calls
+it).
+
+A function that executes immediately:
+
+var a = function () {
+  ....
+}();
+
+
+A conundrum
+
+Look at this code:
+
+var f = function () {
+  return function () {
+    alert ("Hello");
+  };
+}();
+
+After executing this code, I can call f. But what does it do? It returns a function!
+
+f ->
+
+function () {alert ("Hello");}
+
+So how do I actually get that alert to work?
+
+How to actually evaluate the return function?
+
+Modules
+Objects that hide their stuff and are private:
+
+function myPowerConstructor (x) {
+  var that = otherMaker(x);
+  var secret = f(x);
+  that.priv = function () {
+    ... secret x that ...
+  };
+  return that;
+}
+
+-------
+
+Mozilla Developer Network
+
+[[https://developer.mozilla.org/en/JavaScript/A_re-introduction_to_JavaScript#Closures][A re-introduction to JavaScript]]
+
+Object oriented dynamic language
+
+it has types and operators
+
+JavaScript does not have classes.
+
+class functionality is implemented by object prototypes
+
+functions are objects; can be passed around like any other object (functions are first class
+citizens)
+
+
+
